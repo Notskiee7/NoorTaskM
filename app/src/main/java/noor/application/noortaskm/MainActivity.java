@@ -1,10 +1,11 @@
 package noor.application.noortaskm;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -21,5 +22,11 @@ public class MainActivity extends AppCompatActivity {
         FABmain=findViewById(R.id.FABmain);
         SVTask=findViewById(R.id.SVTask);
         LVMain=findViewById(R.id.LVMain);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
     }
 }
