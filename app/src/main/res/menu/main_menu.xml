@@ -5,8 +5,8 @@
         android:orderInCategory="100"
         android:title="History" />
     <item
-        android:id="@+id/itmSignUp"
-        android:title="Sign Up" />
+        android:id="@+id/itmSignOut"
+        android:title="sign Out" />
     <item
         android:id="@+id/itmSettings"
         android:title="Settings" />

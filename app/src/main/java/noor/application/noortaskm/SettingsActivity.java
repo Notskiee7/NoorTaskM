@@ -25,7 +25,6 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         TVsettings=findViewById(R.id.TVsettings);
-        TVended=findViewById(R.id.TVended);
         BTNsettings=findViewById(R.id.BTNsettings);
         BTNclear=findViewById(R.id.BTNclear);
         TBsinged=findViewById(R.id.TBhsigned);
