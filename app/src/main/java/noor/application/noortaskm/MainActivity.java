@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener, MainActivity1 {
+public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
     private FloatingActionButton FABmain;
     private SearchView SVTask;
     private ListView LVMain;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
 
         }
         if (item.getItemId() == R.id.itmSettings) {
-            Intent i=new Intent(getApplicationContext(),HistoryActivity.class);
+            Intent i = new Intent(getApplicationContext(), HistoryActivity.class);
             startActivity(i);
         }
         if (item.getItemId() == R.id.itmSignOut) {
@@ -62,8 +62,7 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         return true;
     }
 
-    public void onClick(DialogInterface dialogInterface, int which)
-    {//Listener 4. react for each action
+    public void onClick(DialogInterface dialogInterface, int which) {//Listener 4. react for each action
         if (which == dialogInterface.BUTTON_POSITIVE) {
             Toast.makeText(getApplicationContext(), "Loging out", Toast.LENGTH_SHORT).show();
             dialogInterface.cancel();
@@ -75,11 +74,5 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
             Toast.makeText(getApplicationContext(), "Loging out canceled", Toast.LENGTH_SHORT).show();
             dialogInterface.cancel();
         }
-    }
-
-
-    @Override
-    public void onCancel(DialogInterface dialogInterface, int which) {
-
     }
 }
