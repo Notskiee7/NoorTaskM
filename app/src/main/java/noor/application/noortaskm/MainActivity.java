@@ -14,7 +14,7 @@ import android.widget.SearchView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogInterface.OnCancelListener {
     private FloatingActionButton FABmain;
     private SearchView SVTask;
     private ListView LVMain;
@@ -39,31 +39,32 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.itmHistory) {
-            Intent i=new Intent(getApplicationContext(), HistoryActivity.class);
+            Intent i = new Intent(getApplicationContext(), HistoryActivity.class);
             startActivity(i);
 
         }
         if (item.getItemId() == R.id.itmSettings) {
-            Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-            startActivity(i);
         }
         if (item.getItemId() == R.id.itmSignOut) {
-            AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            //
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure");
-            //
-            builder.setCancelable(false);
-
-            builder.setPositiveButton("YES",  this);
-            //
-            builder.setNegativeButton("NO",  this);
-            //
-            AlertDialog dialog=builder.create();
-            //
+            builder.setCancelable(true);
+            //listener 3. add Listener to the buttons
+            builder.setPositiveButton("YES", ( DialogInterface.OnClickListener ) this);
+            builder.setNegativeButton("NO", ( DialogInterface.OnClickListener ) this);
+            AlertDialog dialog = builder.create();
             dialog.show();
 
         }
         return true;
+    }
+        public void onClick(DialogInterface dialogInterface, int i)
+        {
+    }
+
+    @Override
+    public void onCancel(DialogInterface dialogInterface) {
+//Listener 4. react for each action
     }
 }
 
