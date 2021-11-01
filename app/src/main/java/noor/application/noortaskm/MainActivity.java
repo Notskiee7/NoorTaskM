@@ -11,10 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity implements DialogInterface.OnCancelListener {
+public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener, MainActivity1 {
     private FloatingActionButton FABmain;
     private SearchView SVTask;
     private ListView LVMain;
@@ -44,27 +45,41 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
 
         }
         if (item.getItemId() == R.id.itmSettings) {
+            Intent i=new Intent(getApplicationContext(),HistoryActivity.class);
+            startActivity(i);
         }
         if (item.getItemId() == R.id.itmSignOut) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure");
             builder.setCancelable(true);
             //listener 3. add Listener to the buttons
-            builder.setPositiveButton("YES", ( DialogInterface.OnClickListener ) this);
-            builder.setNegativeButton("NO", ( DialogInterface.OnClickListener ) this);
+            builder.setPositiveButton("YES", this);
+            builder.setNegativeButton("NO", this);
             AlertDialog dialog = builder.create();
             dialog.show();
 
         }
         return true;
     }
-        public void onClick(DialogInterface dialogInterface, int i)
-        {
+
+    public void onClick(DialogInterface dialogInterface, int which)
+    {//Listener 4. react for each action
+        if (which == dialogInterface.BUTTON_POSITIVE) {
+            Toast.makeText(getApplicationContext(), "Loging out", Toast.LENGTH_SHORT).show();
+            dialogInterface.cancel();
+            finish();//to close current activity
+        }
+
+
+        if (which == dialogInterface.BUTTON_NEGATIVE) {
+            Toast.makeText(getApplicationContext(), "Loging out canceled", Toast.LENGTH_SHORT).show();
+            dialogInterface.cancel();
+        }
     }
+
 
     @Override
-    public void onCancel(DialogInterface dialogInterface) {
-//Listener 4. react for each action
+    public void onCancel(DialogInterface dialogInterface, int which) {
+
     }
 }
-
