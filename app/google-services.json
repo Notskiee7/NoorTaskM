@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "97907930374",
+    "project_id": "noortaskm",
+    "storage_bucket": "noortaskm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97907930374:android:3e952bce2ef504455a9a87",
+        "android_client_info": {
+          "package_name": "noor.application.noortaskm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97907930374-663v9fo6i885h3q60advoh80ddi6dg8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADZTgTH9ZSBrrqlQHh7qTROwjUYCQ0lqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97907930374-663v9fo6i885h3q60advoh80ddi6dg8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
