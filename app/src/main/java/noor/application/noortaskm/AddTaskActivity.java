@@ -14,10 +14,11 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.errorprone.annotations.Var;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import MyData.Mytask;
 
 public class AddTaskActivity extends AppCompatActivity {
     private TextInputEditText ETTitle, ETSubject;
@@ -52,7 +53,7 @@ public class AddTaskActivity extends AppCompatActivity {
         String title = ETTitle.getText().toString();
         String subject = ETSubject.getText().toString();
         int progress = SBTask.getProgress();
-        String importance = SPNTask.getSelectedItem().toString();
+        int importance = ( int ) SPNTask.getSelectedItem();
         boolean isOk = true;
         if (title.length() == 0) {
             ETTitle.setError("must enter subject");
@@ -73,7 +74,7 @@ public class AddTaskActivity extends AppCompatActivity {
 
             mytask.setKey(key);
 
-            ref.child("mytask").child(key).setValue(mytask).addOnCompleteListener(new OnCompleteListener<Void>() {
+            ref.child("mytask").child(uid).child(key).setValue(mytask).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {

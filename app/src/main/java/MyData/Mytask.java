@@ -1,4 +1,4 @@
-package noor.application.noortaskm;
+package MyData;
 
 public class Mytask
 {
@@ -6,7 +6,7 @@ private String key;
 private String title;
 private String subject;
 private String owner;
-private  String important;
+private int important;
 private String image;
 
 
@@ -26,7 +26,7 @@ private String image;
         this.owner = owner;
     }
 
-    public void setImportant(String important) {
+    public void setImportant(int important) {
         this.important = important;
     }
 
@@ -52,7 +52,7 @@ private String image;
     return owner;
 }
 
-    public String getImportant() {
+    public int getImportant() {
     return important;
 }
 
