@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".SignUpActivity">
 
     <Button
@@ -11,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
+        android:backgroundTint="@color/teal_700"
         android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +23,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout6"
-        android:layout_width="413dp"
-        android:layout_height="55dp"
+        android:layout_width="402dp"
+        android:layout_height="77dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
@@ -31,14 +33,15 @@
             android:id="@+id/ETConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/actionMenuTextColor"
             android:hint="@string/confirm_password"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,14 +52,15 @@
             android:id="@+id/ETPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/actionMenuTextColor"
             android:hint="@string/password"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,32 +71,37 @@
             android:id="@+id/ETEmail2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="?attr/actionMenuTextColor"
             android:hint="@string/email"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="408dp"
+        android:layout_height="62dp"
         android:layout_marginTop="31dp"
         android:layout_marginBottom="37dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout10"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ETFirst"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/first_name" />
+            android:layout_height="wrap_content"
+            android:background="?attr/actionMenuTextColor"
+            android:hint="@string/first_name"
+            android:textColor="@android:color/transparent"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +112,7 @@
             android:id="@+id/ETLast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/actionMenuTextColor"
             android:hint="@string/last_name"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>

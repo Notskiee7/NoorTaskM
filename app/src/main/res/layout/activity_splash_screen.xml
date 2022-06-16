@@ -8,15 +8,28 @@
 
     <ImageView
         android:id="@+id/IVSplash"
-        android:layout_width="0dp"
-        android:layout_height="265dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="49dp"
+        android:layout_width="345dp"
+        android:layout_height="438dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
         android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/IVtext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/my_logo1_foreground" />
+        app:srcCompat="@mipmap/logoooo17_foreground" />
+
+    <ImageView
+        android:id="@+id/IVtext"
+        android:layout_width="408dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/IVSplash"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVSplash"
+        app:srcCompat="@mipmap/logoooo177_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>

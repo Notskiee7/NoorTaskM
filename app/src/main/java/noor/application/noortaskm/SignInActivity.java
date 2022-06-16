@@ -41,7 +41,7 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
     }
-    private void validate() {
+    private void validate() {// تقوم بفحص الحقول وتعبئتها
         boolean isOk = true;
         String email = ETEmail.getText().toString();
         String password = ETPassword.getText().toString();

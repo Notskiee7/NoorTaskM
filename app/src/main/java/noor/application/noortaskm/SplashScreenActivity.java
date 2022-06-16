@@ -12,12 +12,15 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashScreenActivity extends AppCompatActivity {
     private ImageView IVSplash;
+    private ImageView IVtext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         IVSplash=findViewById(R.id.IVSplash);
+        IVtext=findViewById(R.id.IVtext);
+
 // thread:1
         Thread th=new Thread(){
             //thread:2
